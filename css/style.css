@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Be Vietnam', sans-serif;
+
+}
+/* ------------------------- Navigation Bar -------------------------*/
+.nav-bar{
+    height: 50px;
+    background-color: #202020;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: all 0.8s ease-out;
+    pointer-events: none;
+}
+
+.nav-links.open {
+    clip-path: circle(800px at 90% -10%);
+    -webkit-clip-path: circle(800px at 90% -10%);
+    pointer-events: all;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    background-color: red;
+}
+
+.nav-links li{
+    opacity: 0;
+}
+
+.nav-links li:nth-child(1){
+    transition: all 0.5s ease 0.1s;
+}
+
+.nav-links li:nth-child(2){
+    transition: all 0.5s ease 0.2s;
+}
+
+.nav-links li:nth-child(3){
+    transition: all 0.5s ease 0.3s;
+}
+
+.nav-links li:nth-child(4){
+    transition: all 0.5s ease 0.4s;
+}
+
+li.fade{
+    opacity: 1;
+}
+
+.line {
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    background-color: white;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+}
+
+.sticky{
+
+}
+
+
+/*------------------------- Page Sections -------------------------*/
+.page {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.section {
+    width: 100%;
+    padding: 0 .8rem;
+    min-height: 300px;
+    display: flex;
+}
+
+hr{
+    margin: 10px 0;
+}
+
+.half-hr{
+    width: 80%;
+    margin: 10px auto;
+}
+/*------------------------- About -------------------------*/
+#about {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);    font-size: 1.3rem;
+    color: white;
+    padding: 1rem .8rem;
+}
+
+#about h1{
+    font-size: 2rem;
+    background: white;
+    color: black;
+    max-width: 280px;
+    padding: 0 4px;
+    margin-top: 4px
+}
+
+.about-text hr{
+    max-width:290px;
+}
+
+.about-text{
+    
+}
+
+#about:after{}
+
+/*------------------------- Skills -------------------------*/
+.center-text{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#skills {
+    display:flex;
+    flex-direction: column;
+    padding: .6rem .8rem;
+}
+#skills .icons-wrapper{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#skills .icon-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#skills .skills-container{
+    padding: 0 10px;
+}
+.html-icon i{
+    color: #e85d25;
+}
+
+.css-icon i{
+    color: #249ddb;
+}
+
+.js-icon i{
+    color: #f0d91d;
+}
+
+.jquery-icon img {
+    width: 4em;
+    height: 4em;
+}
+
+.mocha-icon img{
+    width: 3.5em;
+    height: 4em;
+}
+
+.chai-icon img{
+    width: 4em;
+    height: 4em;
+}
+/*------------------------- Portfolio -------------------------*/
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio .github-link{
+    font-size: 1.5rem;
+    color: rgb(78, 78, 231);
+    font-weight: bolder;
+}
+
+#portfolio .proyecto-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio .proyecto-container img{
+    /* height: 18rem; */
+    max-width: 18rem;
+    margin: 15px auto;
+}
+
+
+/*------------------------- Contact -------------------------*/
+#contact {
+    background-color: #202020;
+}
+
+/*------------------------- Media Queries -------------------------*/
+
+
+/*------------ Mobile Styles ------------*/
+@media only screen and (min-width: 399px) {
+    body {
+        background-color: #F09A9D;
+    }
+
+    #about h1{
+        max-width: 290px;
+    }
+
+
+}
+
+/*------------ Tablet Styles ------------*/
+@media only screen and (min-width: 426px) and (max-width: 960px) {
+    body {
+        background-color: #F5CF8E;
+        /* Yellow */
+    }
+    #portfolio .proyecto-container img{
+        /* height: 18rem; */
+        max-width: 24rem;
+        margin: 15px auto;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1100px at 90% -10%);
+        -webkit-clip-path: circle(1100px at 90% -10%);
+    }
+}
+
+/*------------ Desktop Styles ------------*/
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: #B2D6FF;
+        /* Blue */
+    }
+
+    #portfolio .proyecto-container img{
+        /* height: 18rem; */
+        max-width: 30rem;
+        margin: 15px auto;
+    }
+    .nav-links.open {
+        clip-path: circle(1100px at 90% -10%);
+        -webkit-clip-path: circle(1100px at 90% -10%);
+    }
+}
