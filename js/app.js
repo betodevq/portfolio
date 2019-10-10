@@ -3,21 +3,32 @@ const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 const navBar = document.querySelector(".nav-bar");
 const sticky = navBar.offsetTop;
-var navHeight = $('.nav-bar').outerHeight();
+const navHeight = $('.nav-bar').outerHeight();
+const openNav = document.querySelector(".open-nav");
+var open = false;
 
-function toggleHamburger(){
-    navLinks.classList.toggle("open");
+function toggleHamburger() {
+    if (open){
+        openNav.style.opacity = 0;
+        navLinks.style.width = "0";
+        open = false;
+    } else {
+        openNav.style.opacity = 1;
+        navLinks.style.width = "250px";
+        open = true;
+    }
     links.forEach(link => {
         link.classList.toggle('fade');
     });
 }
 
-hamburger.addEventListener('click',toggleHamburger);
+hamburger.addEventListener('click', toggleHamburger);
+openNav.addEventListener('click', toggleHamburger);
 
-$('.smooth').click(function(){
+$('.smooth').click(function () {
     toggleHamburger();
     $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top - navHeight
+        scrollTop: $($.attr(this, 'href')).offset().top - navHeight
     }, 500);
     return false;
 });
