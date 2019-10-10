@@ -153,46 +153,54 @@ hr{
     flex-direction: column;
     padding: .6rem .8rem;
 }
-#skills .icons-wrapper{
-    justify-content: space-between;
+
+.skill-tools{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    justify-content: center;
+    margin: auto 0;
 }
-#skills .icon-container{
-    display: flex;
-    flex-direction: column;
+
+.tool{
+    font-size: 1.1rem;
     text-align: center;
-    margin-bottom: 1rem;
-}
-#skills .skills-container{
-    padding: 0 10px;
-}
-.html-icon i{
-    color: #e85d25;
-}
-
-.css-icon i{
-    color: #249ddb;
+    padding: 9px;
+    margin: 3px;
+    width: 120px;
+    height: 50px;
+    background-color: salmon;
+    color: white;
 }
 
-.js-icon i{
-    color: #f0d91d;
+.html-icon{ /*HTML*/
+    background-color: #e85d25;
 }
-
-.jquery-icon img {
-    width: 4em;
-    height: 4em;
+.css-icon{ /*CSS*/
+    background-color: #249ddb;
 }
-
-.mocha-icon img{
-    width: 3.5em;
-    height: 4em;
+.js-icon{ /*JavaScript*/
+    background-color: #f0d91d;
+    color: black;
 }
-
-.chai-icon img{
-    width: 4em;
-    height: 4em;
+.jquery-icon{ /*jQuery*/
+    background-color: #0865a6;
+}
+.node-icon{ /*Node.js*/
+    background-color: #8cc03d;
+    color: #282923;
+}
+.express-icon{ /*Express*/
+    background-color: #323232;
+}
+.git-icon{ /*Git*/
+    background-color: #e94f32;
+}
+.mocha-icon{ /*Mocha.js*/
+    background-color: #896446;
+}
+.chai-icon{ /*Chai.js*/
+    background-color: #f8e5a9;
+    color: #9e0701;
 }
 /*------------------------- Portfolio -------------------------*/
 
@@ -261,6 +269,27 @@ hr{
         background-color: #B2D6FF;
         /* Blue */
     }
+    #about{
+        padding: 2rem 8rem;
+    }
+    .section#skills{
+        min-height: 200px;
+    }
+    #skills{
+        padding: 0 8rem;
+        padding-top: 1rem;
+    }
+    .skill-tools{
+        margin: 0;
+        padding-top: 1rem;
+    }
+    #portfolio{
+        padding: 2rem 8rem;
+    }
+    #about{
+        padding: 2rem 8rem;
+    }
+
 
     #portfolio .proyecto-container img{
         /* height: 18rem; */
