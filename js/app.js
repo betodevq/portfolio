@@ -34,10 +34,3 @@ $('.smooth').click(function () {
     }, 500);
     return false;
 });
-
-function getResolution() {
-    let test = document.querySelector('.text');
-    test.textContent = "Your screen resolution is: " + screen.width + "x" + screen.height;
-}
-
-getResolution();
