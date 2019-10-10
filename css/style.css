@@ -98,7 +98,7 @@ li.fade{
     padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
 .section {
