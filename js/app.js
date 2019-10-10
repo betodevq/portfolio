@@ -10,10 +10,12 @@ var open = false;
 function toggleHamburger() {
     if (open){
         openNav.style.opacity = 0;
-        navLinks.style.width = "0";
+        openNav.style.width = 0;
+        navLinks.style.width = '0';
         open = false;
     } else {
         openNav.style.opacity = 1;
+        openNav.style.width = '100%';
         navLinks.style.width = "250px";
         open = true;
     }

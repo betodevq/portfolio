@@ -87,7 +87,7 @@ li.fade{
 .open-nav{
     background-color: rgba(0, 0, 0, 0.336);
     position: fixed;
-    width: 100%;
+    width: 0;
     height: 100%;
     z-index: 1;
     opacity: 0;
