@@ -234,7 +234,20 @@ hr{
 
 /*------------------------- Media Queries -------------------------*/
 
+@media only screen and (max-width: 305px) {
+    body {
+        background-color: #F09A9D;
+    }
 
+    #about h1{
+        max-width: 260px;
+        font-size:1.8rem;
+    }
+
+    .about-text{
+        font-size: 1.2rem;
+    }
+}
 /*------------ Mobile Styles ------------*/
 @media only screen and (min-width: 399px) {
     body {
